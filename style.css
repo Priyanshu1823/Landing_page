@@ -13,11 +13,12 @@ body{
     align-items: center;
     min-height: 100vh;
     background-repeat: no-repeat;
-
-   
 }
+
+/* Main wrapper */
 .wrapper{
-    width: 420px;
+    width: 100%;
+    max-width: 420px;  /* Ensures it doesn't exceed 420px on larger screens */
     background: transparent;
     border: 2px solid rgba(255,255,255, .2);
     backdrop-filter: blur(20px);
@@ -25,16 +26,21 @@ body{
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
+    box-sizing: border-box;  /* Ensures padding doesn't affect the width */
 }
+
+/* Header */
 .wrapper h1{
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
 }
+
+/* Input fields */
 .wrapper .input-box{
     width: 100%;
     height: 50px;
-   position: relative;
-    margin: 30px 0;
+    position: relative;
+    margin: 20px 0;
 }
 .input-box input{
     width: 100%;
@@ -58,11 +64,13 @@ body{
     transform: translateY(-50%);
     font-size: 20px;
 }
+
+/* Remember and Forget Links */
 .wrapper .remember-forget{
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
-    margin: -15px 0 15px;
+    margin: -10px 0 10px;
 }
 .remember-forget label input{
     accent-color: #fff;
@@ -71,11 +79,12 @@ body{
 .remember-forget a{
     color:#fff;
     text-decoration: none;
-
 }
 .remember-forget a:hover{
     text-decoration: underline;
 }
+
+/* Button styling */
 .wrapper .btn {
     width: 100%;
     height: 45px;
@@ -89,6 +98,8 @@ body{
     color: #333;
     font-weight: 600;
 }
+
+/* Register link */
 .wrapper .register-link{
     font-size: 14.5px;
     text-align: center;
@@ -101,4 +112,68 @@ body{
 }
 .register-link p a:hover{
     text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px 30px;
+    }
+
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+        padding: 15px 40px 15px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        padding: 15px 20px;
+    }
+
+    .wrapper h1 {
+        font-size: 24px;
+    }
+
+    .input-box input {
+        font-size: 12px;
+        padding: 12px 35px 12px 12px;
+    }
+
+    .wrapper .btn {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .wrapper .remember-forget {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px) {
+    .wrapper {
+        padding: 10px 15px;
+    }
+
+    .wrapper h1 {
+        font-size: 20px;
+    }
+
+    .input-box input {
+        font-size: 10px;
+        padding: 10px 30px 10px 10px;
+    }
+
+    .wrapper .btn {
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .wrapper .remember-forget {
+        font-size: 10px;
+    }
 }
